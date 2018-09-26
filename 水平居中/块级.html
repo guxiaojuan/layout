@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>块级元素居中</title>
+
+    <style>
+        .container{
+            text-align: center;
+            background-color: bisque;
+        }
+        .content{
+            background-color: bisque;
+            margin: 0 auto;
+            width: 300px;
+        }
+        .relative-1{
+            position: relative;
+            height: 30px;
+            background-color: cornflowerblue;
+        }
+        .center1{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">块级元素可以使用margin:0 auto;来居中</div>
+<hr>
+
+<div class="container">
+    <p>块级元素可以通过给父块级元素设置text-align：center水平居中</p>
+    <p>text-align是控制如何相对他的父元素对齐</p>
+    <p>text-align是可继承的</p>
+</div>
+<hr>
+
+<div class="relative-1">
+    <div class="center1">使用position定位实现水平居中</div>
+</div>
+<hr>
+
+<div class="flex">使用flex布局justify-content:center;水平居中</div>
+</body>
+</html>

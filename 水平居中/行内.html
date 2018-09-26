@@ -2,9 +2,47 @@
 <head>
     <meta charset="UTF-8">
     <title>行内元素居中</title>
+
+    <style>
+        .div{
+            background-color: aquamarine;
+        }
+        span{
+            border: 1px solid;
+        }
+        .container{
+            text-align: center;
+        }
+        .relative-1{
+            position: relative;
+            height: 30px;
+            background-color: cornflowerblue;
+        }
+        .center1{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
-
 <body>
+<div class="div container">
+    <span>行内元素可以使用text-align来居中</span>
+</div>
+<hr>
 
+<div class="relative-1">
+    <span class="center1">使用position定位实现水平居中</span>
+</div>
+<hr>
+
+<div class="div flex">
+    <span>使用flex布局来水平居中行内元素</span>
+</div>
+<hr>
 </body>
 </html>
