@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>行内元素垂直居中</title>
+
+    <style>
+        .div{
+            background-color: aquamarine;
+        }
+        span{
+            border: 1px solid;
+        }
+        .container{
+            height: 100px;
+            line-height: 100px;
+        }
+        .relative-1{
+            position: relative;
+            height: 100px;
+            background-color: cornflowerblue;
+        }
+        .center1{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .flex{
+            height: 100px;
+            display: flex;
+            align-items: center;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+<div class="div container">
+    <span>行内元素可以通过设置父元素的line-height来设置垂直居中</span>
+</div>
+<hr>
+
+<div class="relative-1">
+    <span class="center1">使用position定位实现垂直居中</span>
+</div>
+<hr>
+
+<div class="div flex">
+    <span>使用flex布局来垂直居中行内元素</span>
+</div>
+<hr>
+</body>
+</html>
