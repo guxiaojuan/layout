@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>全屏布局</title>
+    <style>
+        div {
+            border: 1px solid #ccc;
+        }
+        .main {
+            position: relative;
+            height: 100%;
+        }
+        .top, .left, .right, .bottom {
+            position: absolute;
+        }
+        .top{
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 100px;
+        }
+        .left{
+            top:100px;
+            left: 0;
+            bottom: 40px;
+            width: 200px;
+        }
+        .right{
+            bottom: 40px;
+            top: 100px;
+            left: 200px;
+            right: 0;
+        }
+        .bottom{
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+        }
+    </style>
+</head>
+<div class="main">
+    <div class="top">顶部top</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="bottom">底部bottom</div>
+</div>
+</html>

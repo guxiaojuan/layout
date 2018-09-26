@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>两侧定宽，中间自适应-----圣杯布局</title>
+    <meta charset="UTF-8">
+    <style>
+        .div{
+            height: 600px;
+            border:1px solid #ccc;
+        }
+        .left, .right, .middle {
+            height: 100%;
+            float: left;
+            position: relative;
+        }
+        .left, .right {
+            width: 100px;
+        }
+        .left{
+            background-color: cornflowerblue;
+            margin-left: -100%;
+            left: -100px;
+        }
+        .middle {
+            background-color: greenyellow;
+            width: 100%;
+        }
+        .right{
+            background-color: aquamarine;
+            margin-left: -100px;
+            right: -100px;
+        }
+        .main{
+            padding: 0 100px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="div main">
+    <div class="middle">
+        <h3>中间弹性区</h3>
+        <p>圣杯布局，将middle放在最前边，设置float:left;然后三部分都设置为相对定位relative</p>
+        <p>middle部分width:100%占满</p>
+        <p>middle占满了，此时要把left拉到最左边，就是margin-left:-100%</p>
+        <p>让右边的盒子上去，设置负的左边距为自身宽度</p>
+        <p>left拉回来了，但是会覆盖middle，此时就要给main，也就是最外层设置padding</p>
+        <p>middle内容拉回来了，但是left也跟着过来了，所以再对left设置相对定位 left:-100px</p>
+        <p>对right设置相对定位，right:-100px;</p>
+
+    </div>
+    <div class="left">左侧定宽---margin-left:-100%;将盒子拉上来</div>
+    <div class="right">右侧定宽---margin-left:-100px;将盒子拉上来</div>
+</div>
+
+
+<hr>
+</body>
+</html>

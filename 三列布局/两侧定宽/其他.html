@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>两侧定宽,中间自适应</title>
+    <meta charset="UTF-8">
+    <style>
+        .div{
+            height: 100px;
+            border:1px solid #ccc;
+        }
+        .left{
+            width: 200px;
+            height: 100%;
+            background-color: cornflowerblue;
+        }
+        .middle {
+            height: 100%;
+            background-color: greenyellow;
+        }
+        .right{
+            width: 200px;
+            height: 100%;
+            background-color: aquamarine;
+        }
+        .relative-1{
+            position: relative;
+        }
+        .left1, .right1, .middle1{
+            position: absolute;
+        }
+        .left1{
+            left:0;
+        }
+        .middle1{
+            left:200px;
+            right: 200px;
+        }
+        .right1{
+            right: 0;
+        }
+        .flex-2{
+            display: flex;
+        }
+        .middle2{
+            flex: 1;
+        }
+        .grid-3{
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="div relative-1">
+    <div class="left left1">左侧定宽---position:absolute;left:0</div>
+    <div class="middle middle1">中间自适应---position:absolute;<p>left:200px;</p></div>
+    <div class="right right1">右侧定宽---position:absolute;right:0</div>
+</div>
+<hr>
+
+<div class="div flex-2">
+    <div class="left">左侧定宽 --- flex布局</div>
+    <div class="middle middle2">中间自适应---flex:1</div>
+    <div class="right right2">右侧定宽</div>
+</div>
+<hr>
+
+<div class="div grid-3">
+    <div class="left">左侧定宽 --- grid布局</div>
+    <div class="middle">中间自适应---grid-template-columns</div>
+    <div class="right">右侧定宽</div>
+</div>
+</body>
+</html>

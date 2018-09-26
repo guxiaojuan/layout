@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>全屏布局</title>
+    <style>
+        div{
+            border: 1px solid #ccc;
+        }
+        .main{
+            height: 100%;
+            display: grid;
+            grid-template-rows: 100px auto 40px;
+        }
+        .middle{
+            display: grid;
+            grid-template-columns: 200px auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <div>top</div>
+    <div class="middle">
+        <div>left</div>
+        <div>right</div>
+    </div>
+    <div>bottom</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>左列定宽，右列自适应</title>
+    <meta charset="UTF-8">
+    <style>
+        .div {
+            height:100px;
+        }
+        .item1{
+            background-color: cornflowerblue;
+        }
+        .item2{
+            background-color: aquamarine;
+        }
+        .item3{
+            background-color: bisque;
+        }
+        .item4{
+            background-color: burlywood;
+        }
+        .div1{
+            float:left;
+            width: 25%;
+            height: 100%;
+        }
+        .flex-2{
+            display: flex;
+        }
+        .div2{
+            flex: 1;
+        }
+        .grid-3{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    </style>
+</head>
+<body>
+<div class="div">
+    <div class="div1 item1">使用float等列分布</div>
+    <div class="div1 item2"></div>
+    <div class="div1 item3"></div>
+    <div class="div1 item4"></div>
+</div>
+<hr>
+
+<div class="div flex-2">
+    <div class="div2 item1">flex布局</div>
+    <div class="div2 item2"></div>
+    <div class="div2 item3"></div>
+    <div class="div2 item4"></div>
+</div>
+<hr>
+
+<div class="div grid-3">
+    <div class="item1">grid布局</div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+    <div class="item4"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>一列不定，一列自适应</title>
+    <meta charset="UTF-8">
+    <style>
+        .div{
+            height: 100px;
+            border:1px solid #ccc;
+        }
+        .left1{
+            background-color: darkgreen;
+            float:left;
+            height: 100%;
+        }
+        .right1{
+            height: 100%;
+            background-color: greenyellow;
+            overflow: hidden;
+        }
+        .flex-2{
+            display: flex;
+            flex-flow: row;
+        }
+        .left2{
+            background-color: greenyellow;
+        }
+        .right2{
+            flex: 1;
+            background-color: cornflowerblue;
+        }
+        .grid-3{
+            display: grid;
+            grid-template-columns: auto 1fr;  /*auto和1fr互换就是左列自适应，右列不定宽*/
+        }
+        .left3{
+            background-color: greenyellow;
+        }
+        .right3{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="div">
+    <div class="left1">左测不定宽---float:left</div>
+    <div class="right1">右侧自适应---overflow:hidden</div>
+</div>
+<hr>
+
+<div class="div flex-2">
+    <div class="left2">左侧不定宽---flex布局</div>
+    <div class="right2">右侧自适应---flex:1</div>
+</div>
+<hr>
+
+<div class="div grid-3">
+    <div class="left3">左测不定宽---grid布局</div>
+    <div class="right3">
+        右侧自适应
+        <p>父元素：grid-template-columns: auto auto;</p>
+    </div>
+</div>
+<hr>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>全屏布局</title>
+
+    <style>
+        div{
+            border: 1px solid #ccc;
+        }
+        .main{
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+        }
+        .top{
+            height: 100px;
+        }
+        .middle{
+            flex:1;
+            display: flex;
+            /*flex-flow: row;*/
+        }
+        .left{
+            width: 200px;
+        }
+        .right{
+            flex: 1;
+        }
+        .bottom {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<div class="main">
+    <div class="top">top</div>
+    <div class="middle">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    <div class="bottom">bottom</div>
+</div>
+</html>

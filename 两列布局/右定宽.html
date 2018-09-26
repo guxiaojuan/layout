@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>右列定宽，左列自适应</title>
+    <meta charset="UTF-8">
+    <style>
+        .div{
+            height: 100px;
+            border:1px solid #ccc;
+        }
+        .padding-1 {
+            padding-left: 300px;   /*抵消left块移动的margin-left*/
+        }
+        .right1{
+            width: 300px;
+            background-color: darkgreen;
+            float:right;
+            height: 100%;
+        }
+        .left1{
+            float: left;
+            height: 100%;
+            width: 100%;
+            margin-left: -300px;
+            background-color: greenyellow;
+        }
+        .right2{
+            float: right;
+            background-color: honeydew;
+            width: 300px;
+            height: 100%;
+        }
+        .left2{
+            background-color: greenyellow;
+            height: 100%;
+            overflow: hidden;
+        }
+        .relative-3 {
+            position: relative;
+        }
+        .left3{
+            position: absolute;
+            left: 0;
+            right: 300px;
+            height: 100px;
+            background-color: greenyellow;
+        }
+        .right3{
+            position: absolute;
+            width: 300px;
+            right:0;
+            height: 100px;
+            background-color: cornflowerblue;
+        }
+        .flex-4{
+            display: flex;
+            flex-flow: row;
+        }
+        .left4{
+            flex: 1;
+            background-color: greenyellow;
+        }
+        .right4{
+            width: 300px;
+            background-color: aliceblue;
+        }
+        .grid-5{
+            display: grid;
+            grid-template-columns: auto 300px;
+        }
+        .left5{
+            background-color: greenyellow;
+        }
+        .right5{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+<div class="div padding-1">
+    <div class="left1">
+        左测自适应---float:left
+        <p>margin-left: -300px; 父元素需要设置padding-left:300px来抵消这个移动</p>
+    </div>
+    <div class="right1">右侧定宽---float:right</div>
+</div>
+<hr>
+
+
+<div class="div">
+    <div class="right2">
+        右侧定宽---float: right
+        <p>布局先是右侧div,然后左侧div</p>
+    </div>
+    <div class="left2">左测自适应---overflow:hidden;</div>
+</div>
+<hr>
+
+<div class="div relative-3">
+    <div class="left3">左测自适应---position:absolute</div>
+    <div class="right3">右侧定宽---position:absolute</div>
+</div>
+<hr>
+
+<div class="div flex-4">
+    <div class="left4">左测自适应---flex布局--flex:1</div>
+    <div class="right4">右侧定宽</div>
+</div>
+<hr>
+
+<div class="div grid-5">
+    <div class="left5">左测自适应---grid布局</div>
+    <div class="right5">
+        右侧定宽
+        <p>父元素：grid-template-columns: 300px auto;</p>
+    </div>
+</div>
+<hr>
+</body>
+</html>
