@@ -1,0 +1,44 @@
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>清除浮动</title>
+    <style>
+        .son{
+            height: 200px;
+            width: 400px;
+            float: left;
+        }
+        .foot{
+            height: 200px;
+            background-color: cyan;
+        }
+        .parent{
+            /*height: 200px;*/
+            /*overflow: hidden;*/
+            /*overflow: auto;*/
+            display: table;
+        }
+        /*.parent:after{*/
+        /*display: block;*/
+        /*clear: both;*/
+        /*content: '';*/
+        /*}*/
+        .clear{
+            height: 0;
+            /*clear: both;*/
+        }
+    </style>
+</head>
+
+<body>
+<div class="parent">
+    <div class="son" style="background-color: aquamarine">1</div>
+    <div class="son" style="background-color: burlywood">2</div>
+    <div class="son" style="background-color: #ccc">3</div>
+    <div class="clear"></div>
+</div>
+
+<div class="foot">不浮动</div>
+</body>
+</html>
